@@ -1,0 +1,40 @@
+import player.Player;
+import board.Board;
+import java.util.*;
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Player1 Details:");
+        System.out.print("Enter Player Name: ");
+        String name=sc.nextLine();
+        System.out.print("Enter Players age: ");
+        int age=sc.nextInt();
+        sc.next();
+        System.out.print("Enter Player contactNo: ");
+        String contact=sc.next();
+        System.out.print("Enter Players emailId: ");
+        String emailid=sc.next();
+        System.out.print("Enter Players address: ");
+        String address=sc.next();
+        Player p1=new Player();
+        p1.setPlayerDetails(name, address, contact, emailid, age);
+        p1.getPlayerDetails();
+        System.out.println("Enter Player2 Details:");
+        System.out.print("Enter Player Name: ");
+        String name1=sc.nextLine();
+        System.out.print("Enter Players age: ");
+        int age1=sc.nextInt();
+        sc.next();
+        System.out.print("Enter Player contactNo: ");
+        String contact1=sc.next();
+        System.out.print("Enter Players emailId: ");
+        String emailid1=sc.next();
+        System.out.print("Enter Players address: ");
+        String address1=sc.next();
+        Player p2=new Player();
+        p2.setPlayerDetails(name1, address1, contact1, emailid1, age1);
+        p2.getPlayerDetails();
+        Board b=new Board(10);
+        b.printBoard();
+    }
+}
